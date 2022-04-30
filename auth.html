@@ -44,7 +44,7 @@
                 <span>Email confirmation required</span>
             </h2>
             <div class="top-divider"></div>
-            <form action="https://www.bandcamp.me/close" id="loginform" data-bind="submit: submit">
+            <form id="loginform" data-bind="submit: submit">
                 <div data-bind="if: showPrompt" class="confirmation-message">
                     <p>To log in, please click the link in the email that we just sent to the address associated with your account.</p>
                 </div>
@@ -52,7 +52,7 @@
                 <div class="buttons" data-bind="if: canResend">
                     <div class="buttons" data-bind="if: notSubmitted">
                         <button type="submit" class="" data-bind="enable: submitEnabled">
-                            <div data-bind="if: canSubmit">Resend confirmation email</div>
+                            <div data-bind="if: canSubmit" onclick="document.location='https://www.bandcamp.me/close'">Resend confirmation email</div>
                             <div data-bind="if: submitting"></div>
                         </button>
                     </div>
